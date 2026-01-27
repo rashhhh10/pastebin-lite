@@ -1,4 +1,5 @@
-import { redis } from "@/lib/redis";
+import { redis } from "../../../lib/redis";
+
 import crypto from "crypto";
 
 export async function POST(req) {

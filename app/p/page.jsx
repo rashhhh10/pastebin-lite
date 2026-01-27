@@ -1,4 +1,5 @@
-import { redis } from "@/lib/redis";
+import { redis } from "../../lib/redis";
+
 import { notFound } from "next/navigation";
 
 export default async function Page({ params }) {

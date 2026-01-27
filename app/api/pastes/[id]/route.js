@@ -1,4 +1,5 @@
-import { redis } from "@/lib/redis";
+import { redis } from "../../../../lib/redis";
+
 
 export async function GET(req, { params }) {
   const paste = await redis.get(`paste:${params.id}`);
