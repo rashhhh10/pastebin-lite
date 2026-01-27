@@ -1,14 +1,10 @@
-import { redis } from "../../lib/redis";
+export const dynamic = "force-dynamic";
 
-import { notFound } from "next/navigation";
-
-export default async function Page({ params }) {
-  const paste = await redis.get(`paste:${params.id}`);
-  if (!paste) notFound();
-
+export default function PastePage() {
   return (
-    <pre style={{ padding: 20, whiteSpace: "pre-wrap" }}>
-      {paste.content}
-    </pre>
+    <main style={{ padding: 20 }}>
+      <h1>Paste Viewer</h1>
+      <p>Paste content is loaded at runtime.</p>
+    </main>
   );
 }
